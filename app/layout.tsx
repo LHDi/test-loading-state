@@ -15,16 +15,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const middlewareMessage = headers().get('x-middleware-message');
-
   return (
     <html lang="en">
       <body className={inter.className}>
         <main>
-          <p>This is from the Layout</p>
           <p>
-            Middleware message from headers:{' '}
-            <span className="text-red-500">{middlewareMessage}</span>
+            This is from the <b>ROOT</b> Layout
           </p>
           {children}
         </main>
