@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+
 async function Page() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
