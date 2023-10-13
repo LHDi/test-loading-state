@@ -5,7 +5,7 @@ import type { NextRequest } from 'next/server';
 export async function middleware(req: NextRequest) {
   const res = NextResponse.next();
 
-  res.headers.set('x-middleware-message', 'hello from middleware');
+  res.cookies.set('x-middleware-message', 'hello from middleware');
   return res;
 }
 

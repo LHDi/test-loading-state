@@ -1,7 +1,7 @@
-import { headers } from 'next/headers';
+import { cookies } from 'next/headers';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const middlewareMessage = headers().get('x-middleware-message');
+  const middlewareMessage = cookies().get('x-middleware-message')?.value;
 
   return (
     <>
